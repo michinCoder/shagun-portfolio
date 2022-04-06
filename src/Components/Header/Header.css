@@ -1,0 +1,100 @@
+nav {
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 6em;
+    height: 6em;
+}
+
+.logo img {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+    object-position: center;
+    cursor: pointer;
+}
+
+.nav-links {
+    width: 50%;
+    display: block;
+}
+.collapse, .navbar-toggler{
+    display: none;
+    z-index: 1000;
+}
+
+.nav-links ul {
+    text-transform: uppercase;
+    color: #A7C392;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.newNav{
+    position: relative;
+    top: .5em;
+}
+.collapse{
+    width: 100%;
+}
+.newNav ul{
+    text-transform: uppercase;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column; 
+}
+.newNav ul li{
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    font-size: 16px;
+    font-weight: 500;
+    color: #A7C392;
+    margin-top: 5px;
+}
+
+.nav-links ul li {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    font-size: 16px;
+    font-weight: 500;
+    color: #A7C392;
+}
+
+.nav-links ul li:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-links{
+        display: none;
+    }
+    .collapse, .navbar-toggler{
+        display: block;
+    }
+    .logo {
+        width: 4em;
+        height: 4em;
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    nav{
+        width: 100%;
+        height: 15%;
+    }
+    .logo{
+        margin: 1em;
+    }
+    .nav-links ul li{
+        font-size: 12px;
+    }
+}
